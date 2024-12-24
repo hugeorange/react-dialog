@@ -1,0 +1,123 @@
+.ru-checkbox {
+  .icon-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    .checkbox-icon {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.2s ease-out;
+      width: 16px;
+      height: 16px;
+      border: 1.5px solid var(--bg-soft);
+      border-radius: 4px;
+      box-shadow: 0px 2px 2px 0px rgba(27, 28, 29, 0.06);
+      &.checked {
+        border: 1.5px solid var(--primary-base);
+        background-color: var(--primary-base);
+        box-shadow: 0px 4px 8px 0px transparent;
+        svg path {
+          stroke: var(--bg-white);
+          stroke-width: 2;
+          stroke-dasharray: 11.313708305358887;
+          stroke-dashoffset: 11.313708305358887;
+          animation: draw 0.5s ease forwards;
+        }
+      }
+      &.disabled {
+        border: 1.5px solid var(--bg-soft);
+        background-color: var(--bg-soft);
+      }
+    }
+  }
+  &:hover {
+    .checkbox-icon:not(.disabled) {
+      border-color: var(--bg-sub);
+      &.checked {
+        border-color: var(--primary-darker);
+        background-color: var(--primary-darker);
+      }
+    }
+  }
+  &:active {
+    .checkbox-icon:not(.disabled) {
+      border-color: var(--primary-base);
+      &.checked {
+        border-color: var(--primary-dark);
+        background-color: var(--primary-dark);
+      }
+    }
+  }
+
+  // toggle icon 样式 ==============================================================
+  .icon-wrap-toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 20px;
+    pointer-events: none;
+    .toggle-bg {
+      position: relative;
+      transition: all 0.2s ease-out;
+      width: 28px;
+      height: 16px;
+      background-color: var(--bg-soft);
+      border-radius: 9999px;
+      .toggle-icon {
+        transition: all 0.2s ease-out;
+        position: absolute;
+        left: 2px;
+        top: 2px;
+        width: 12px;
+        height: 12px;
+        border: 4px solid var(--bg-white);
+        border-radius: 50%;
+        box-shadow: 0px 4px 8px 0px rgba(27, 28, 29, 0.06);
+      }
+      &.checked {
+        background-color: var(--primary-base);
+        .toggle-icon {
+          left: 14px;
+        }
+      }
+      &.disabled {
+        background-color: var(--bg-white);
+        border: 1px solid var(--stroke-soft);
+        .toggle-icon {
+          border: 0;
+          width: 10px;
+          height: 10px;
+          background-color: var(--bg-soft);
+        }
+      }
+    }
+  }
+  &:hover {
+    .toggle-bg:not(.disabled) {
+      background-color: var(--bg-sub);
+      &.checked {
+        background-color: var(--primary-darker);
+      }
+    }
+  }
+  &:active {
+    .toggle-bg:not(.disabled) {
+      background-color: var(--bg-soft);
+      .toggle-icon {
+        transform: scale(0.8);
+      }
+    }
+  }
+}
+
+
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}

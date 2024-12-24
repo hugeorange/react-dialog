@@ -1,0 +1,193 @@
+// ====================================== input textarea ==========================================
+.ru-input {
+  input,
+  textarea {
+    // placeholder 样式
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    appearance: none;
+    outline: none;
+    &::placeholder {
+      color: var(--text-soft);
+    }
+    &:disabled {
+      cursor: not-allowed;
+      &::placeholder {
+        color: var(--text-disabled);
+      }
+    }
+  }
+  .input-wrap {
+    transition: all 0.3s;
+    color: var(--text-strong);
+    border: 1px solid var(--stroke-soft);
+    background-color: var(--bg-white);
+    overflow: hidden;
+    .input-icon {
+      display: flex;
+      color: var(--icon-sub);
+      &.not-filled {
+        color: var(--icon-soft);
+      }
+    }
+    .input-addon {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      background-color: var(--bg-white);
+      &:first-child {
+        border-right: 1px solid var(--stroke-soft);
+      }
+      &:last-child {
+        border-left: 1px solid var(--stroke-soft);
+      }
+    }
+    // 各种状态样式
+    &:hover {
+      color: var(--text-sub);
+      border: 1px solid transparent;
+      background-color: var(--bg-weak);
+      .input-addon {
+        background-color: var(--bg-weak);
+      }
+    }
+    &:focus-within {
+      color: var(--text-strong);
+      border: 1px solid var(--stroke-strong);
+      background-color: var(--bg-white);
+      box-shadow: 0px 0px 0px 2px var(--bg-white),
+        0px 0px 0px 4px var(--neutral-alpha-16);
+      .input-addon {
+        background-color: var(--bg-white);
+      }
+    }
+    &.disabled {
+      cursor: not-allowed;
+      color: var(--text-disabled);
+      border: 1px solid transparent;
+      background-color: var(--bg-weak);
+      .input-icon {
+        color: var(--icon-disabled);
+      }
+      .input-addon {
+        background-color: var(--bg-weak);
+      }
+    }
+    &.error {
+      border: 1px solid var(--error-base);
+      color: var(--text-strong);
+      background-color: var(--bg-white);
+    }
+  }
+}
+
+// =============================== otp 输入框 ========================================
+.ru-otp {
+  display: flex;
+  width: 100%;
+  gap: 10px;
+  .otp-slot {
+    position: relative;
+    width: 100%;
+    height: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--stroke-soft);
+    border-radius: 10px;
+    &.active {
+      border: 1px solid var(--stroke-strong);
+      box-shadow: 0px 0px 0px 2px var(--bg-white),
+        0px 0px 0px 4px var(--neutral-alpha-16);
+      z-index: 10;
+    }
+  }
+  .fake-caret {
+    animation: caret-blink 1.2s ease-out infinite;
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+  }
+}
+
+// ============================ inline ==========================
+.ru-input-inline .input-wrap {
+  border: 1px solid transparent;
+  background-color: var(--bg-white);
+  &.disabled {
+    color: var(--text-disabled);
+    background-color: var(--bg-white);
+  }
+  .readOnly {
+    pointer-events: none;
+  }
+}
+
+@keyframes caret-blink {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+// 模拟 input 样式的 trigger
+// trigger
+
+.ru-input-trigger {
+  // outline: none;
+  color: var(--text-strong);
+  border: 1px solid var(--stroke-soft);
+  background-color: var(--bg-white);
+  overflow: hidden;
+  transition: all 0.3s;
+  .placeholder {
+    user-select: none;
+    color: var(--text-soft);
+  }
+  // 各种状态样式
+  &:hover {
+    border: 1px solid transparent;
+    background-color: var(--bg-weak);
+    .placeholder {
+      color: var(--text-sub);
+    }
+  }
+  &.focus {
+    border: 1px solid var(--stroke-strong);
+    background-color: var(--bg-white);
+    box-shadow: 0px 0px 0px 2px var(--bg-white),
+      0px 0px 0px 4px var(--neutral-alpha-16);
+
+    // focus 不应该 strong
+    // .placeholder {
+    //   color: var(--text-strong);
+    // }
+  }
+  &.disabled {
+    cursor: not-allowed;
+    border: 1px solid transparent;
+    background-color: var(--bg-weak);
+    .placeholder {
+      color: var(--text-disabled);
+    }
+  }
+  &.error {
+    border: 1px solid var(--error-base);
+    background-color: var(--bg-white);
+  }
+}

@@ -1,0 +1,10 @@
+// search
+.ru-dropdown-search {
+  color: var(--icon-soft);
+  &:hover {
+    color: var(--icon-sub);
+  }
+  &:focus-within {
+    color: var(--icon-strong);
+  }
+}

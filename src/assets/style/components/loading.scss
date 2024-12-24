@@ -1,0 +1,13 @@
+// icon 动画 ===============================================================================================
+.loading-icon-spinner {
+  animation: loadingSpin 1s cubic-bezier(0.83, 0, 0.17, 1) infinite;
+}
+
+@keyframes loadingSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

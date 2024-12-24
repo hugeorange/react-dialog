@@ -1,0 +1,17 @@
+.ru-rating-bar-area {
+  .ru-rating-bar {
+    & > div:first-child {
+      border-top-left-radius: 12px;
+    }
+    & > div:last-child {
+      border-top-right-radius: 12px;
+    }
+  }
+  .input-wrap {
+    border-top-color: transparent;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+  }
+}

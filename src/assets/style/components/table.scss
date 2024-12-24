@@ -1,0 +1,26 @@
+.ru-table {
+  table {
+    width: 100%;
+    thead {
+      color: var(--text-sub);
+      tr th {
+        background-color: var(--bg-weak);
+      }
+    }
+    tbody {
+      tr:not(:nth-child(2n)) {
+        color: var(--text-strong);
+        cursor: pointer;
+        &:hover {
+          background-color: var(--bg-weak);
+          td {
+            background-color: var(--bg-weak);
+          }
+        }
+        td {
+          background-color: var(--bg-white);
+        }
+      }
+    }
+  }
+}

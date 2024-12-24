@@ -1,0 +1,10 @@
+.ru-breadcrumbs-items {
+  &:hover {
+    .ru-breadcrumbs-items-icon {
+      color: var(--icon-strong);
+    }
+    .ru-breadcrumbs-items-text {
+      color: var(--text-strong);
+    }
+  }
+}

@@ -1,0 +1,19 @@
+.ru-pagination-cell {
+  color: var(--text-sub);
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.3s;
+  &:hover {
+    background-color: var(--bg-weak);
+    border-color: transparent;
+  }
+  &.active {
+    color: var(--text-strong);
+    border-color: transparent;
+    background-color: var(--bg-weak);
+  }
+  &.disabled {
+    color: var(--text-disabled);
+    cursor: not-allowed;
+  }
+}

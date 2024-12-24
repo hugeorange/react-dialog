@@ -1,0 +1,93 @@
+@import '../src/assets/style/index.scss';
+
+* {
+  font-family: Inter;
+}
+
+body {
+  overflow-y: scroll;
+}
+
+// .prism-code,
+// .language-tsx * {
+//   font-family: 'Fira Code', 'Fira Mono', Menlo, Consolas, 'DejaVu Sans Mono',
+//     monospace;
+// }
+
+.dumi-default-doc-layout {
+  font-family: Inter !important;
+}
+.dumi-default-content-footer > dl dd {
+  display: flex;
+}
+
+.dumi-default-content-footer > nav {
+  a[data-prev],
+  a[data-next] {
+    display: flex;
+    gap: 4px;
+    small {
+      display: flex;
+    }
+  }
+}
+
+.dumi-default-sidebar > dl > dd > a.active {
+  color: var(--primary-base) !important;
+}
+
+.dumi-default-content-footer a {
+  color: var(--primary-base) !important;
+}
+
+.dumi-default-footer a {
+  color: var(--primary-base) !important;
+}
+
+.dumi-default-hero-title > span {
+  background: linear-gradient(
+    30deg,
+    #90d5ff 30%,
+    var(--primary-base)
+  ) !important;
+  background-clip: text !important;
+}
+
+.dumi-default-hero-actions > a:first-child {
+  background-color: var(--primary-base) !important;
+}
+
+.dumi-default-hero-actions > a:not(:first-child) {
+  color: var(--primary-base) !important;
+  border: 1px solid var(--primary-base) !important;
+}
+
+.dumi-default-navbar > li > .dumi-default-navbar-dropdown > li > a:hover,
+.dumi-default-navbar > li > a:hover {
+  color: var(--primary-base) !important;
+}
+
+.dumi-default-header {
+  z-index: 11 !important;
+}
+
+// ::-webkit-scrollbar-thumb {
+//   background-color: #ccc;
+//   border-color: #ccc;
+//   border-radius: 9999px;
+//   border-width: 1px;
+// }
+
+// ::-webkit-scrollbar-track {
+//   background-color: transparent;
+//   border-radius: 9999px;
+// }
+
+// ::-webkit-scrollbar {
+//   height: 1rem;
+//   width: 0.5rem;
+// }
+
+.markdown a {
+  color: var(--primary-base) !important;
+}

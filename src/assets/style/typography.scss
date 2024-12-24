@@ -1,0 +1,205 @@
+html,
+body {
+  font-feature-settings: 'ss11' on, 'cv09' on, 'liga' off, 'calt' off;
+  font-family: Inter;
+}
+
+.title-h1 {
+  /* Title/H1 Title */
+  font-family: 'Inter Display';
+  font-size: 56px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 64px; /* 114.286% */
+  letter-spacing: -0.56px;
+}
+
+.title-h2 {
+  /* Title/H2 Title */
+  font-family: 'Inter Display';
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 56px; /* 116.667% */
+  letter-spacing: -0.48px;
+}
+
+.title-h3 {
+  /* Title/H3 Title */
+  font-family: 'Inter Display';
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 48px; /* 120% */
+  letter-spacing: -0.4px;
+}
+
+.title-h4 {
+  /* Title/H4 Title */
+  font-family: 'Inter Display';
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 40px; /* 125% */
+  letter-spacing: -0.16px;
+}
+
+.title-h5 {
+  /* Title/H5 Title */
+  font-family: 'Inter Display';
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 32px; /* 133.333% */
+}
+
+.title-h6 {
+  /* Title/H6 Title */
+  font-family: 'Inter Display';
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px; /* 140% */
+}
+
+.label-xl {
+  /* Label/X Large */
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 32px; /* 133.333% */
+  letter-spacing: -0.36px;
+}
+
+.label-l {
+  /* Label/Large */
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 133.333% */
+  letter-spacing: -0.27px;
+}
+
+.label-m {
+  /* Label/Medium */
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 150% */
+  letter-spacing: -0.176px;
+}
+
+.label-s {
+  /* Label/Small */
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px; /* 142.857% */
+  letter-spacing: -0.084px;
+}
+
+.label-xs {
+  /* Label/X Small */
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px; /* 133.333% */
+}
+
+.paragraph-xl {
+  /* Paragraph/X Large */
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px; /* 133.333% */
+  letter-spacing: -0.36px;
+}
+
+.paragraph-l {
+  /* Paragraph/Large */
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 133.333% */
+  letter-spacing: -0.27px;
+}
+
+.paragraph-m {
+  /* Paragraph/Medium */
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+  letter-spacing: -0.176px;
+}
+
+.paragraph-s {
+  /* Paragraph/Small */
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 142.857% */
+  letter-spacing: -0.084px;
+}
+
+.paragraph-xs {
+  /* Paragraph/X Small */
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px; /* 133.333% */
+}
+
+.subheading-m {
+  /* Subheading/Medium */
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 150% */
+  letter-spacing: 0.96px;
+}
+
+.subheading-s {
+  /* Subheading/Small */
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px; /* 142.857% */
+  letter-spacing: 0.84px;
+}
+
+.subheading-xs {
+  /* Subheading/X Small */
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px; /* 133.333% */
+  letter-spacing: 0.48px;
+}
+
+.subheading-2xs {
+  /* Subheading/2X Small */
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 12px; /* 109.091% */
+  letter-spacing: 0.22px;
+}
+
+.docs-label {
+  /* Docs/Label */
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 32px; /* 177.778% */
+  letter-spacing: -0.27px;
+}
+
+.docs-paragraph {
+  /* Docs/Paragraph */
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px; /* 177.778% */
+  letter-spacing: -0.27px;
+}

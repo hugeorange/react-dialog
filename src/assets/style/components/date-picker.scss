@@ -1,0 +1,30 @@
+.ru-date-picker {
+  width: 370px;
+}
+
+.ru-origin-date-picker {
+  .day-cell-range-start {
+    &::before {
+      content: '';
+      display: block;
+      width: 8px;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      right: -4px;
+      background-color: var(--primary-alpha-10);
+    }
+  }
+  .day-cell-range-end {
+    &::before {
+      content: '';
+      display: block;
+      width: 8px;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: -4px;
+      background-color: var(--primary-alpha-10);
+    }
+  }
+}

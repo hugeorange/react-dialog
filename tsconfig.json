@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "lib": [
+      "es6",
+      "dom",
+      "es5",
+      "es2015.promise",
+      "es2015",
+      "es2017"
+    ],
+    "strict": true,
+    "declaration": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "jsx": "react",
+    "baseUrl": "./",
+    "paths": {
+      "@@/*": [
+        ".dumi/tmp/*"
+      ],
+      "@rushable/align-ui": [
+        "src"
+      ],
+      "@rushable/align-ui/*": [
+        "src/*",
+        "*"
+      ]
+    }
+  },
+  "include": [
+    ".dumirc.ts",
+    "src/**/*",
+    "typings.d.ts"
+  ],
+}

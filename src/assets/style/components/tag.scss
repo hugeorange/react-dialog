@@ -1,0 +1,65 @@
+.ru-tag {
+  height: 24px;
+  border-radius: 6px;
+  transition: all ease-out 0.2s;
+
+  // stroke gray 两种不同样式
+  &.stroke {
+    border: 1px solid var(--stroke-soft);
+    color: var(--text-sub);
+
+    &:hover {
+      color: var(--text-sub);
+      border: 1px solid transparent;
+      background-color: var(--bg-weak);
+    }
+    &:active {
+      color: var(--text-strong);
+      border: 1px solid var(--stroke-strong);
+      background-color: var(--bg-white);
+    }
+    &.disabled {
+      color: var(--text-disabled);
+      border: 1px solid transparent;
+      background-color: var(--bg-weak);
+    }
+  }
+  // ===================================================
+  &.gray {
+    border: 1px solid transparent;
+    color: var(--text-sub);
+    background-color: var(--bg-weak);
+    &:hover {
+      color: var(--text-sub);
+      border: 1px solid var(--stroke-soft);
+      background-color: var(--bg-white);
+    }
+    &:active {
+      color: var(--text-strong);
+      border: 1px solid var(--stroke-strong);
+      background-color: var(--bg-white);
+    }
+    &.disabled {
+      color: var(--text-disabled);
+      border: 1px solid transparent;
+      background-color: var(--bg-weak);
+    }
+  }
+
+  // close icon 伪类样式
+  .close-icon {
+    color: var(--icon-soft);
+  }
+  &.stroke:hover,
+  &.gray:hover {
+    .close-icon {
+      color: var(--icon-sub);
+    }
+  }
+  &.stroke:active,
+  &.gray:active {
+    .close-icon {
+      color: var(--icon-strong);
+    }
+  }
+}

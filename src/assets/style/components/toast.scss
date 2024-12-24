@@ -1,0 +1,109 @@
+.ToastViewport {
+  --viewport-padding: 32px;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  padding: var(--viewport-padding);
+  gap: 10px;
+  max-width: 454px;
+
+  margin: 0;
+  list-style: none;
+  z-index: 2147483647;
+  outline: none;
+}
+.ToastViewport-top-left {
+  top: 0;
+  left: 0;
+}
+.ToastViewport-top-center {
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.ToastViewport-top-right {
+  top: 0;
+  right: 0;
+}
+.ToastViewport-bottom-left {
+  bottom: 0;
+  left: 0;
+}
+.ToastViewport-bottom-center {
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.ToastViewport-bottom-right {
+  bottom: 0;
+  right: 0;
+}
+
+.ToastRoot {
+  box-shadow: 0px 16px 32px -12px rgba(14, 18, 27, 0.1);
+}
+
+.ToastViewport-bottom-left,
+.ToastViewport-bottom-center,
+.ToastViewport-bottom-right {
+  .ToastRoot[data-state='open'] {
+    animation: bottomSlideIn 240ms cubic-bezier(0.65, 2, 0.75, 0.7);
+  }
+  .ToastRoot[data-state='closed'] {
+    animation: bottomSlideOut 150ms ease-in;
+  }
+}
+
+.ToastViewport-top-left,
+.ToastViewport-top-center,
+.ToastViewport-top-right {
+  .ToastRoot[data-state='open'] {
+    animation: topSlideIn 240ms cubic-bezier(0.65, 2, 0.75, 0.7);
+  }
+  .ToastRoot[data-state='closed'] {
+    animation: topSlideOut 150ms ease-in;
+  }
+}
+
+@keyframes bottomSlideIn {
+  from {
+    transform: translateY(calc(100% + var(--viewport-padding)));
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes bottomSlideOut {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(calc(100% + var(--viewport-padding)));
+  }
+}
+
+@keyframes topSlideIn {
+  from {
+    transform: translateY(calc(-100% - var(--viewport-padding)));
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes topSlideOut {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(calc(-100% - var(--viewport-padding)));
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .ToastViewport {
+    width: 100vw;
+  }
+}
